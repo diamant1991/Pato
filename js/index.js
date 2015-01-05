@@ -1,24 +1,4 @@
 
-			var id_menu = new Array('sub-menu');
-			startList = function allclose() {
-			for (i=0; i < id_menu.length; i++){
-				document.getElementById(id_menu[i]).style.display = "none";
-			}
-			}
-			function openMenu(id){
-				for (i=0; i < id_menu.length; i++){
-					if (id != id_menu[i]){
-						document.getElementById(id_menu[i]).style.display = "none";
-					}
-				}
-				if (document.getElementById(id).style.display == "block"){
-					document.getElementById(id).style.display = "none";
-				}else{
-					document.getElementById(id).style.display = "block";
-				}
-			}
-			window.onload=startList;
-
 		$(function () {
 		var filterList = {
 			init: function () {
@@ -53,8 +33,19 @@
 		};
 		filterList.init();	
 
+$('.padd-left').click(function(){
+	/* Заносим выпадающий список в переменную */
+	var dropBlock = $(this).parent().find('.dropdown');
 
-$('.dropdown').find('li').click(function(){
+	/* Делаем проверку: Если выпадающий блок скрыт то делаем его видимым*/
+	if( dropBlock.is(':hidden') ) {
+		dropBlock.slideDown();
+
+		/* Выделяем ссылку открывающую select */
+		$(this).addClass('active');
+
+		/* Работаем с событием клика по элементам выпадающего списка */
+		$('.dropdown').find('li').click(function(){
 
 			/* Заносим в переменную HTML код элемента
 			списка по которому кликнули */
@@ -66,19 +57,35 @@ $('.dropdown').find('li').click(function(){
 
 			/* Передаем значение переменной selectResult в ссылку которая
 			открывает наш выпадающий список и удаляем активность */
-			$(this).parent().parent().find('.padd-left').removeClass('active').html(selectResult);});
+			$(this).parent().parent().find('.padd-left').removeClass('active').html(selectResult);
+
+			/* Скрываем выпадающий блок */
+			dropBlock.slideUp();
+		});
+
+	/* Продолжаем проверку: Если выпадающий блок не скрыт то скрываем его */
+	} else {
+		$(this).removeClass('active');
+		dropBlock.slideUp();
+	}
+
+	/* Предотвращаем обычное поведение ссылки при клике */
+	return false;
+});
 
 
 $('.spoiler-body').hide();
-$('.spoiler-title').click(function(){
+$('.minus').click(function(){
     $(this).toggleClass('opened').toggleClass('closed').next().slideToggle();
     if($(this).hasClass('opened')) {
-        $(this).html('Скрыть текст');
+        $('.minus').css("background","url(../images/minus.png);");
     }
     else {
-        $(this).html('Показать текст');
+        $('.minus').css("background","url(../images/plus.png);");
     }
 });
 
 
+
 	});	
+

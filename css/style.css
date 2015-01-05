@@ -225,12 +225,15 @@
 	width: 32px;
 	height: 33px;
 	float: left;
+	cursor: pointer;
+	position: relative;
+	top: -24px;
 }
 .about-company{
 	width: 580px;
 	float: left;
 	color: #fff;
-	margin-left: 35px;
+	margin-left: 67px;
 	padding-top: 10px;
 	position: relative;
 }
@@ -240,11 +243,18 @@
 		font-family: 'Century Gothic';
 		font-size: 14px;
 	}
-	.about-company p{
+	.about-company-text{
+		width: 580px;
+		float: left;
+		margin-left: 35px;
+		overflow: hidden;
+	}
+	.about-company-text p{
 		font-family: 'OpenSans';
 		font-size: 12px;
 		margin-top: 15px;
 		line-height: 1.5;
+		color: #fff;
 	}
 .contacts{
 	width: 145px;
@@ -252,6 +262,11 @@
 	margin-left: 85px;
 	color: #fff;
 	padding-top: 10px;
+}
+.contacts-text{
+	width: 145px;
+	float: left;
+	margin-left: 85px;
 }
 	.contacts h3{
 		color: #9bd37e;
@@ -275,11 +290,12 @@
 	margin-top: 15px;
 	float: right;
 }
-.contacts p{
+.contacts-text p{
 	font-size: 16px;
 	font-family: 'Century Gothic';
 	margin-top: 7px;
 	float: right;
+	color: #fff;
 }
 .copyright{
 	font-size: 12px;
@@ -294,13 +310,13 @@
 	width: 31px;
 	height: 31px;
 	position: relative;
-	top: 90px;
+	top: 65px;
 }
-.control ol li{
+.control ul li{
 	display: inline-block;
 	margin-right: 2px;
 }
-.control ol li a{
+.control ul li{
 	display: inline-block;
 	width: 10px;
 	height: 10px;
@@ -309,13 +325,14 @@
 	-webkit-border-radius:12px;
 	border-radius: 12px;
 	background-color: #fff;
+	cursor: pointer;
 }
 .control{
 	position: absolute;
 	top: 10px;
 	right: 145px;
 }
-.control .active, .control ol li a:hover{
+.control .current, .control ul li:hover{
 	background-color: #7cc576;
 }
 
@@ -361,7 +378,10 @@
 	text-decoration: none;
 	color: #000;
 	padding-left: 15px;
-	
+	display: inline-block;
+	width: 100%;
+	background:url(../images/arrow-bottom.png)no-repeat;
+	background-position: 175px 3px;
 }
 
 .padd-left{
@@ -381,7 +401,9 @@
 	padding-right: 14px;
 	border-right: 2px solid #c7c7c7;
 }
-
+.dropdown{
+	display: none;
+}
 /*---------------------------------------Страница о студии----------------------------------------*/
 
 .under-nav{
@@ -603,7 +625,6 @@ background: url(../images/shape.jpg) no-repeat;
 	background-size: cover;
 	height: 599px;
 	min-width: 980px;
-	margin-bottom: 50px;
 }
 .contact-information .container{
 	padding-top: 75px !important;
@@ -735,11 +756,18 @@ background: url(../images/shape.jpg) no-repeat;
 
 /*---------------- Спойлер---------*/
 .opened {
-    color:green;
+    background: url(../images/minus.png);
 }
 .closed {
-    color:blue;
+    background: url(../images/plus.png);
 }
 .spoiler-title{
 	cursor: pointer;
+}
+/*---------------Контент слайдер-------*/
+#slider {float:left; position:relative; overflow:auto; width:580px; height:105px}
+#slider ul {position:absolute; list-style:none; top:0; left:0}
+#slider li {float:left; width:580px; height:105px}
+.about-company-text{
+	height: 105px;
 }
