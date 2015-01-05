@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<title>Pato</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" >
+	<meta name="description" content="" >
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>	
+		<div class="nav"> <!-- Навигация-->
+			<div class="container">
+				<nav>
+					<ul class="left-nav">
+						<li><a href="#">Студия</a></li>
+						<li><a href="#" class="active">Портфолио</a></li>
+						<li><a href="#">Услуги</a></li>
+					</ul>
+					<div class="logo">
+						<a href="#" class="logo-container"></a>
+					</div>
+					<ul class="right-nav">
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Галерея</a></li>
+						<li><a href="#">art shop</a></li>
+					</ul>	
+				</nav>
+			</div>
+		</div><!--Конец Навигации-->
+
+
+		<div class="slider"><!-- Слайдер-->
+			<figure>
+				<img src="images/slider.jpg" alt="">
+			</figure>
+		</div><!--Конец слайдера-->
+
+		<div class="filter-block"> <!-- filter-->
+			<div class="container">
+				<div class="header-social">	
+					<a href="#" class="social vopros"></a>
+					<a href="#" class="social star"></a>
+					<a href="#" class="social facebook"></a>
+					<a href="#" class="social in"></a>
+				</div>
+				<form>
+					<input type="text">
+					<input type="submit" value="">
+				</form>
+				<div class="categories">
+					
+						<a href="#" class="padd-left filter" data-filter="app card icon logo web">Все категории</a>
+							<ul id="sub-menu" class="dropdown">
+								<li class="filter" data-filter="app">О студии</li>
+								<li class="filter" data-filter="card">Наши клиенты</li>
+								<li class="filter" data-filter="icon">Команда</li>
+								<li class="filter" data-filter="logo">Наши партнеры</li>
+								<li class="filter" data-filter="web">Новости</li>
+							</ul>
+				</div>
+				<a href="#" onclick="openMenu('sub-menu');return(false)" class="arrow-bottom"></a>
+				<a href="#" class="presentation">Презентация</a>
+			</div>
+		</div> <!-- end filter-->
+
+		<div class="portfolio-block"> <!-- Блок портфолио-->
+			
+				<div class="portfolio logo" data-cat="logo">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/1.jpg" alt="">
+						</a>
+						<div class="label-text">вэб-дизайн</div>
+						
+					</div>
+				</div>
+				<div class="portfolio app" data-cat="app">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/2.jpg" alt="">
+						</a>
+						<div class="label-text">логотипы</div>
+						<div class="label-text-bottom">
+							<div class="text">Teenage Mutant Ninja Turtles</div>
+							<div class="label-social">
+								<a href="#" class="label-social-icon label-star"></a>
+								<a href="#" class="label-social-icon label-facebook"></a>
+								<a href="#" class="label-social-icon label-in"></a>
+								<a href="#" class="label-social-icon label-arrow"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="portfolio card" data-cat="card">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/3.jpg" alt="">
+						</a>
+						<div class="label-text">Фирменный стиль</div>
+					</div>
+				</div>
+				<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/4.jpg" alt="">
+						</a>
+						<div class="label-text">Нейминг</div>
+					</div>
+				</div>
+				<div class="portfolio web" data-cat="web">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/5.jpg" alt="">
+						</a>
+						<div class="label-text">Брендинг</div>
+					</div>
+				</div>
+				<div class="portfolio logo" data-cat="logo">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/6.jpg" alt="">
+						</a>
+						<div class="label-text">Рекламные концепции</div>
+					</div>
+				</div>
+				<div class="portfolio app" data-cat="app">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/7.jpg" alt="">
+						</a>
+						<div class="label-text">Брендбук</div>
+					</div>
+				</div>
+				<div class="portfolio card" data-cat="card">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/8.jpg" alt="">
+						</a>
+						<div class="label-text">Упаковки</div>
+					</div>
+				</div>
+				<div class="portfolio icon" data-cat="icon">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/9.jpg" alt="">
+						</a>
+						<div class="label-text">Промышленный дизайн</div>
+					</div>
+				</div>
+				<div class="portfolio web" data-cat="web">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/10.jpg" alt="">
+						</a>
+						<div class="label-text">Выставочные стенды</div>
+					</div>
+				</div>
+				<div class="portfolio logo" data-cat="logo">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/11.jpg" alt="">
+						</a>
+						<div class="label-text">Дизайн интерьера</div>
+					</div>
+				</div>
+				<div class="portfolio app" data-cat="app">
+					<div class="portfolio-wrapper">
+						<a href="#">
+							<img src="images/12.jpg" alt="">
+						</a>
+						<div class="label-text">Дизайн экстерьера</div>
+					</div>
+				</div>
+			
+		</div><!-- Конец блока портфолио-->
+
+		<footer> <!-- футер-->
+			<div class="container">
+				<div class="minus"></div>
+				<div class="about-company">
+					<h3>о компании</h3>
+					<p>Вам понадобились услуги по дизайну и рекламе, но Вы не знаете к кому обратиться? Все Ваши заботы, связанные с дизайном и рекламой, мы возьмем на себя! Мы имеем огромный опыт в создании и ведении рекламных дизайн-проектов, у нас особый стиль, индивидуальный подход и оригинальные идеи. Для Вас мы разработаем логотип, предложим рекламную концепцию, cоздадим фирменный стиль и бренд-бук, нарисуем сайт.</p>
+					<div class="control">
+						<ol>
+							<li><a href="#" class="active"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+						</ol>
+					</div>
+				</div>
+				<div class="contacts">
+					<h3>контакты</h3>
+					<div class="social-container clear">
+						<a href="#" class="footer-social contacts-vopros"></a>
+						<a href="#" class="footer-social contacts-star"></a>
+						<a href="#" class="footer-social contacts-facebook"></a>
+						<a href="#" class="footer-social contacts-in"></a>
+						<a href="#" class="footer-social contacts-post"></a>
+						<a href="#" class="footer-social contacts-skype"></a>
+					</div>
+					<div class="clear"></div>
+					<p>+7 495 643 0 644 <br>+7 909 906 49 45</p>
+					<div class="clear"></div>
+					<span class="copyright">© 2009-2014 patodesign</span>
+				</div>
+				<a href="#" class="arrow"></a>
+			</div>
+		</footer><!-- Конец футера-->
+	
+	
+</body>
+</html>
