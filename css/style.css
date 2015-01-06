@@ -817,6 +817,21 @@ background: url(../images/shape.jpg) no-repeat;
 	height: 105px;
 }
 
+.wrapper-body{
+	min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 0 -71px 0; /* отрицательный нижний отступ на высоту футера */
+    padding: 0;
+}
+.footer-push{
+	height: 71px;
+}
+footer {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
 
 @media (min-width: 768px) {
   .portfolio-block {
