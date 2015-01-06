@@ -27,33 +27,41 @@
 	src:url(../fonts/Ubuntu-R.ttf);
 }
 
-
+.nav-fixed{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	overflow: hidden;
+	background: #000;
+	min-width: 980px;
+	z-index: 100;
+}
 .container{
 	width: 980px;
 	margin:0 auto;
 }
-.nav, .filter-block, footer{
+.nav, .filter-block, footer, .nav-fixed{
 	overflow: hidden;
 	background: #000;
 	min-width: 980px;
 }
-.nav nav{
+.nav nav , .nav-fixed nav{
 	overflow: hidden;
-	padding:15px 0 15px 55px;
+	
 }
-.nav nav ul li{
+.nav nav ul li, .nav-fixed nav ul li{
 	list-style: none;
 	float: left;
 	margin-right: 30px;
 }
-	.nav nav ul li a{
+	.nav nav ul li a , .nav-fixed nav ul li a{
 		text-decoration: none;
 		color: #fff;
 		font-family: 'Century Gothic';
 		text-transform: uppercase;
 		font-size: 14px;
 	}
-	.nav nav ul li a:hover, .nav nav .active{
+	.nav nav ul li a:hover, .nav nav .active, .nav-fixed nav ul li a:hover, .nav-fixed nav .active{
 		color: #9bd37e;
 	}
 .logo-container{
@@ -65,9 +73,24 @@
 	z-index: 2;
 	
 }
+.logo-text{
+	font-family: 'Century Gothic';
+	text-decoration: none;
+	color: #fff;
+	font-size: 26px;
+	position: relative;
+	top: 10px;
+	left: 40px;
+	display: none;
+}
+.logo-green{
+	color: #57883e;
+}
+
 .left-nav{
 	display: inline-block;
 	float: left;
+	padding:15px 0 15px 55px;
 }
 .logo{
 	float: left;
@@ -78,6 +101,7 @@
 	float: right;
 	position: relative;
 	right: 46px;
+	padding:15px 0 15px 55px;
 }
 
 
@@ -159,10 +183,14 @@
 	 font-family: 'Ubuntu';
 	}
 .portfolio-block{
-	min-width: 980px;
-	padding-bottom: 30px;
-	overflow: hidden;
-}
+	padding-right: 15px;
+ 	padding-left: 15px;
+  	margin-right: auto;
+  	margin-left: auto;
+  	min-width: 750px;
+  	overflow: hidden;
+  	padding-bottom: 30px;
+}	
 .portfolio{
 	margin-top: 15px;
 	float: left;
@@ -223,7 +251,7 @@
 .minus{
 	background: url(../images/minus.png);
 	width: 32px;
-	height: 33px;
+	height: 32px;
 	float: left;
 	cursor: pointer;
 	position: relative;
@@ -256,6 +284,23 @@
 		line-height: 1.5;
 		color: #fff;
 	}
+
+
+#wrapper {
+    width: 1740px;
+    position: relative;
+    left: 0px;
+    transition: left .5s ease-in-out;
+}
+.content-text {
+    float: left;
+    width: 580px;
+    height: 105px;
+    white-space: normal;
+    background-repeat: no-repeat;
+}
+
+
 .contacts{
 	width: 145px;
 	float: left;
@@ -332,7 +377,7 @@
 	top: 10px;
 	right: 145px;
 }
-.control .current, .control ul li:hover{
+.control .active, .control ul li:hover{
 	background-color: #7cc576;
 }
 
@@ -770,4 +815,27 @@ background: url(../images/shape.jpg) no-repeat;
 #slider li {float:left; width:580px; height:105px}
 .about-company-text{
 	height: 105px;
+}
+
+
+@media (min-width: 768px) {
+  .portfolio-block {
+    width: 750px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .portfolio-block {
+    width: 1050px;
+  }
+}
+@media (min-width: 1400px){
+	.portfolio-block{
+		width: 1380px;
+	}
+}
+@media (min-width: 1750px){
+	.portfolio-block{
+		width: 1700px;
+	}
 }

@@ -15,10 +15,10 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
 	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	
 </head>
 <body>	
-		<div class="nav"> <!-- Навигация-->
+		<div class="nav" id="nav"> <!-- Навигация-->
 			<div class="container">
 				<nav>
 					<ul class="left-nav">
@@ -28,6 +28,9 @@
 					</ul>
 					<div class="logo">
 						<a href="#" class="logo-container"></a>
+						<a href="#" class="logo-text">
+							<p><span class="logo-green">Pato</span>Design</p>
+						</a>
 					</div>
 					<ul class="right-nav">
 						<li><a href="#">Контакты</a></li>
@@ -290,9 +293,9 @@
 					<h3>о компании</h3>
 					<div class="control">
 						<ul>
-							<li ></li>
-							<li ></li>
-							<li></li>
+							<li class="itemLinks" data-pos="0px"></li>
+							<li class="itemLinks" data-pos="-580px"></li>
+							<li class="itemLinks" data-pos="-1160px"></li>
 						</ul>
 					</div>
 	
@@ -304,11 +307,17 @@
 				<div class="minus closed"></div>
 				<div class="spoiler-body">
 					<div class="about-company-text">
-						<div id="slider">
-							<ul>
-								<li><p>Вам понадобились услуги по дизайну и рекламе, но Вы не знаете к кому обратиться? Все Ваши заботы, связанные с дизайном и рекламой, мы возьмем на себя! Мы имеем огромный опыт в создании и ведении рекламных дизайн-проектов, у нас особый стиль, индивидуальный подход и оригинальные идеи. Для Вас мы разработаем логотип, предложим рекламную концепцию, cоздадим фирменный стиль и бренд-бук, нарисуем сайт.</p></li>
-							</ul>
-						</div>
+						<div id="wrapper">
+				    <div id="itemOne" class="content-text">
+						<p>Вам понадобились услуги по дизайну и рекламе, но Вы не знаете к кому обратиться? Все Ваши заботы, связанные с дизайном и рекламой, мы возьмем на себя! Мы имеем огромный опыт в создании и ведении рекламных дизайн-проектов, у нас особый стиль, индивидуальный подход и оригинальные идеи. Для Вас мы разработаем логотип, предложим рекламную концепцию, cоздадим фирменный стиль и бренд-бук, нарисуем сайт.</p>
+				    </div>
+				    <div id="itemTwo" class="content-text">
+						<p>Вам понадобились услуги по дизайну и рекламе, но Вы не знаете к кому обратиться? Все Ваши заботы, связанные с дизайном и рекламой, мы возьмем на себя! Мы имеем огромный опыт в создании и ведении рекламных дизайн-проектов, у нас особый стиль, индивидуальный подход и оригинальные идеи. Для Вас мы разработаем логотип, предложим рекламную концепцию, cоздадим фирменный стиль и бренд-бук, нарисуем сайт.</p>
+				    </div>
+				    <div id="itemThree" class="content-text">
+						<p>Вам понадобились услуги по дизайну и рекламе, но Вы не знаете к кому обратиться? Все Ваши заботы, связанные с дизайном и рекламой, мы возьмем на себя! Мы имеем огромный опыт в создании и ведении рекламных дизайн-проектов, у нас особый стиль, индивидуальный подход и оригинальные идеи. Для Вас мы разработаем логотип, предложим рекламную концепцию, cоздадим фирменный стиль и бренд-бук, нарисуем сайт.</p>
+				    </div>
+					</div>
 					</div>
 					<div class="contacts-text">
 						<div class="social-container">
@@ -329,8 +338,8 @@
 
 				
 			</div>
-		</footer><!-- Конец футера-->
+	</footer>
 
-	
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

@@ -12,15 +12,15 @@
 	<meta name="description" content="" >
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
 	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/viewportchecker.js"></script> 
 </head>
 <body>
 
-	<div class="nav"> <!-- Навигация-->
+	<div class="nav" id="nav"> <!-- Навигация-->
 			<div class="container">
 				<nav>
 					<ul class="left-nav">
@@ -30,6 +30,9 @@
 					</ul>
 					<div class="logo">
 						<a href="#" class="logo-container"></a>
+						<a href="#" class="logo-text">
+							<p><span class="logo-green">Pato</span>Design</p>
+						</a>
 					</div>
 					<ul class="right-nav">
 						<li><a href="#">Контакты</a></li>
@@ -42,6 +45,7 @@
 
 	<div class="under-nav"><!-- Блок после главной навигации-->
 		<div class="container">
+			<div class="post">
 			<nav>
 				<ul>
 					<li><a href="#" class="active">О студии</a></li>
@@ -51,6 +55,7 @@
 					<li><a href="#">Новости</a></li>
 				</ul>
 			</nav>
+			</div>
 		</div>
 	</div><!-- Конец блока после главной навигации-->
 
@@ -74,39 +79,60 @@
 
 	<footer> <!-- футер-->
 			<div class="container">
-				<div class="minus"></div>
+				
 				<div class="about-company">
 					<h3>о компании</h3>
-					<p>Вам понадобились услуги по дизайну и рекламе, но Вы не знаете к кому обратиться? Все Ваши заботы, связанные с дизайном и рекламой, мы возьмем на себя! Мы имеем огромный опыт в создании и ведении рекламных дизайн-проектов, у нас особый стиль, индивидуальный подход и оригинальные идеи. Для Вас мы разработаем логотип, предложим рекламную концепцию, cоздадим фирменный стиль и бренд-бук, нарисуем сайт.</p>
 					<div class="control">
-						<ol>
-							<li><a href="#" class="active"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-						</ol>
+						<ul>
+							<li class="itemLinks" data-pos="0px"></li>
+							<li class="itemLinks" data-pos="-580px"></li>
+							<li class="itemLinks" data-pos="-1160px"></li>
+						</ul>
 					</div>
+	
 				</div>
 				<div class="contacts">
 					<h3>контакты</h3>
-					<div class="social-container clear">
-						<a href="#" class="footer-social contacts-vopros"></a>
-						<a href="#" class="footer-social contacts-star"></a>
-						<a href="#" class="footer-social contacts-facebook"></a>
-						<a href="#" class="footer-social contacts-in"></a>
-						<a href="#" class="footer-social contacts-post"></a>
-						<a href="#" class="footer-social contacts-skype"></a>
-					</div>
-					<div class="clear"></div>
-					<p>+7 495 643 0 644 <br>+7 909 906 49 45</p>
-					<div class="clear"></div>
-					<span class="copyright">© 2009-2014 patodesign</span>
 				</div>
-				<a href="#" class="arrow"></a>
+				<div class="clear"></div>
+				<div class="minus closed"></div>
+				<div class="spoiler-body">
+					<div class="about-company-text">
+						<div id="wrapper">
+				    <div id="itemOne" class="content-text">
+						<p>Вам понадобились услуги по дизайну и рекламе, но Вы не знаете к кому обратиться? Все Ваши заботы, связанные с дизайном и рекламой, мы возьмем на себя! Мы имеем огромный опыт в создании и ведении рекламных дизайн-проектов, у нас особый стиль, индивидуальный подход и оригинальные идеи. Для Вас мы разработаем логотип, предложим рекламную концепцию, cоздадим фирменный стиль и бренд-бук, нарисуем сайт.</p>
+				    </div>
+				    <div id="itemTwo" class="content-text">
+						<p>Вам понадобились услуги по дизайну и рекламе, но Вы не знаете к кому обратиться? Все Ваши заботы, связанные с дизайном и рекламой, мы возьмем на себя! Мы имеем огромный опыт в создании и ведении рекламных дизайн-проектов, у нас особый стиль, индивидуальный подход и оригинальные идеи. Для Вас мы разработаем логотип, предложим рекламную концепцию, cоздадим фирменный стиль и бренд-бук, нарисуем сайт.</p>
+				    </div>
+				    <div id="itemThree" class="content-text">
+						<p>Вам понадобились услуги по дизайну и рекламе, но Вы не знаете к кому обратиться? Все Ваши заботы, связанные с дизайном и рекламой, мы возьмем на себя! Мы имеем огромный опыт в создании и ведении рекламных дизайн-проектов, у нас особый стиль, индивидуальный подход и оригинальные идеи. Для Вас мы разработаем логотип, предложим рекламную концепцию, cоздадим фирменный стиль и бренд-бук, нарисуем сайт.</p>
+				    </div>
+					</div>
+					</div>
+					<div class="contacts-text">
+						<div class="social-container">
+							<a href="#" class="footer-social contacts-vopros"></a>
+								<a href="#" class="footer-social contacts-star"></a>
+								<a href="#" class="footer-social contacts-facebook"></a>
+								<a href="#" class="footer-social contacts-in"></a>
+								<a href="#" class="footer-social contacts-post"></a>
+								<a href="#" class="footer-social contacts-skype"></a>
+						</div>
+						<div class="clear"></div>
+						<p>+7 495 643 0 644 <br>+7 909 906 49 45</p>
+						<div class="clear"></div>
+						<span class="copyright">© 2009-2014 patodesign</span>
+					</div>
+					<a href="#" class="arrow"></a>
+				</div>
+
+				
 			</div>
-		</footer><!-- Конец футера-->
+	</footer>
 		
 
-
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>	
