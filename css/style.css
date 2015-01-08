@@ -26,7 +26,23 @@
 	font-family: 'Ubuntu';
 	src:url(../fonts/Ubuntu-R.ttf);
 }
+.closed .spoiler-body { display:none; }
+.closed .title_h3 { background: url(../images/plus.png); }
+.spoiler {
+    position: relative;
+    overflow: hidden;
+}
+.title{
+    width: 32px;
+    height: 32px;
 
+}
+.title_h3 {
+    cursor:pointer;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
 .nav-fixed{
 	position: fixed;
 	width: 100%;
@@ -39,6 +55,9 @@
 .container{
 	width: 980px;
 	margin:0 auto;
+}
+.footer>.container{
+	position: relative;
 }
 .nav, .filter-block, footer, .nav-fixed{
 	overflow: hidden;
@@ -263,7 +282,8 @@
 	color: #fff;
 	margin-left: 67px;
 	padding-top: 10px;
-	position: relative;
+	position: absolute;
+	top: 0;
 }
 	.about-company h3{
 		color: #9bd37e;
@@ -274,7 +294,7 @@
 	.about-company-text{
 		width: 580px;
 		float: left;
-		margin-left: 35px;
+		margin-left: 70px;
 		overflow: hidden;
 	}
 	.about-company-text p{
@@ -298,8 +318,9 @@
     height: 105px;
     white-space: normal;
     background-repeat: no-repeat;
+    overflow: hidden;
+    padding-left: 1px;
 }
-
 
 .contacts{
 	width: 145px;
@@ -307,6 +328,9 @@
 	margin-left: 85px;
 	color: #fff;
 	padding-top: 10px;
+	position: absolute;
+	top: 0;
+	right: 102px;
 }
 .contacts-text{
 	width: 145px;
@@ -506,10 +530,10 @@
 	float: left;
 }
 .about-slider{
-	padding-top: 25px;
+	padding-top: 35px;
 	background-color: #ebebeb;
 	overflow: hidden;
-	padding-bottom: 25px;
+	padding-bottom: 35px;
 }
 .arrow-slider{
 	display: block;
@@ -527,9 +551,21 @@
 	.slider-arrow-right:hover{background-position: 0 -499px; width: 33px; height: 33px;}
 
 .about-slider img{
-	-webkit-box-shadow: 3px 0px 19px 0px rgba(50, 50, 50, 0.64);
-	-moz-box-shadow:   3px 0px 19px 0px rgba(50, 50, 50, 0.64);
-	box-shadow:        3px 0px 19px 0px rgba(50, 50, 50, 0.64);
+	width: 100%;
+}
+
+.swiper-container {
+  height: 465px;
+  width: 832px;
+}
+
+.pagination {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom:5px;
+  width: 100%;
+  display: none;
 }
 
 .arrow-left{
@@ -800,12 +836,12 @@ background: url(../images/shape.jpg) no-repeat;
 	}
 
 /*---------------- Спойлер---------*/
-.opened {
+/*.opened {
     background: url(../images/minus.png);
-}
-.closed {
+}*/
+/*.closed {
     background: url(../images/plus.png);
-}
+}*/
 .spoiler-title{
 	cursor: pointer;
 }
@@ -814,24 +850,37 @@ background: url(../images/shape.jpg) no-repeat;
 #slider ul {position:absolute; list-style:none; top:0; left:0}
 #slider li {float:left; width:580px; height:105px}
 .about-company-text{
-	height: 105px;
+	height: 120px;
+	padding-bottom: 15px;
 }
 
 .wrapper-body{
-	min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 0 -71px 0; /* отрицательный нижний отступ на высоту футера */
+	margin-bottom: 33px;
     padding: 0;
 }
-.footer-push{
-	height: 71px;
-}
+
 footer {
     margin: 0;
     padding: 0;
     height: auto;
 }
+.footer{
+	background: #000;
+	margin: 0;
+    padding: 0;
+    height: auto;
+     position: absolute;
+	 bottom: 0;
+	 width: 100%;
+	 z-index: 10;
+}
+.spoiler-body{
+	background: #000;
+	overflow: hidden;
+	display: none;
+
+}
+
 
 @media (min-width: 768px) {
   .portfolio-block {

@@ -3,13 +3,13 @@
 		var $nav = $("#nav");
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 30 && $nav.hasClass("nav")) {
+        if ($(this).scrollTop() > 10 && $nav.hasClass("nav")) {
             $nav.removeClass("nav").addClass("nav-fixed");
             $('.logo-container').fadeOut(0,function(){
                 $('.logo-text').fadeIn() //показываем текстовый логотип, уже после того, как скрыли логотип
             }) //скрываем логотип
             
-        } else if ($(this).scrollTop() <= 30 && $nav.hasClass("nav-fixed")) {
+        } else if ($(this).scrollTop() <= 10 && $nav.hasClass("nav-fixed")) {
             $nav.removeClass("nav-fixed").addClass("nav");
             $('.logo-text').fadeOut(0,function(){
                 $('.logo-container').fadeIn() //показываем логотип, уже после того, как скрыли текстовый логотип
@@ -93,17 +93,6 @@ $('.padd-left').click(function(){
 });
 
 
-$('.spoiler-body').hide();
-$('.minus').click(function(){
-    $(this).toggleClass('opened').toggleClass('closed').next().slideToggle();
-    if($(this).hasClass('opened')) {
-        $('.minus').css("background","url(../images/minus.png);");
-    }
-    else {
-        $('.minus').css("background","url(../images/plus.png);");
-    }
-});
-
 
 jQuery('.post').addClass("hidden").viewportChecker({
 	    classToAdd: 'visible animated fadeInDown', // Class to add to the elements when they are visible
@@ -112,6 +101,22 @@ jQuery('.post').addClass("hidden").viewportChecker({
 
 
 	});	
+
+$(".closed").toggleClass("show").children(".title");
+
+$(".title").click(function(){
+if ($(this).parent().hasClass("show")) {
+    $("div.spoiler").addClass("show").children(".spoiler-body").hide("medium");
+    $("div.spoiler").children(".title").children(".title_h3").css("background","url(images/plus.png)");
+    $(this).parent().toggleClass("show").children(".spoiler-body").slideToggle("medium");
+    $(this).children(".title_h3").css("background","url(images/minus.png)");
+    }
+
+else {
+    $(this).parent().toggleClass("show").children(".spoiler-body").slideToggle("medium");
+    $(this).children(".title_h3").css("background","url(images/plus.png)");
+    }
+});
 
 
 /*------------------------Слайдер контента------------*/
@@ -158,3 +163,28 @@ function changePosition(link) {
     wrapper.style.left = position;
 }
 
+
+
+/*------------------------------------Swiper slider--------------*/
+		  var mySwiper = new Swiper('.swiper-container',{
+		    pagination: '.pagination',
+		    loop:true,
+		    grabCursor: true,
+		    paginationClickable: true,
+		  })
+		  $('.slider-arrow-left').on('click', function(e){
+		    e.preventDefault()
+		    mySwiper.swipePrev()
+		  })
+		   $('.slider-arrow-bottom').on('click', function(e){
+		    e.preventDefault()
+		    mySwiper.swipePrev()
+		  })
+		  $('.slider-arrow-right').on('click', function(e){
+		    e.preventDefault()
+		    mySwiper.swipeNext()
+		  })
+		   $('.slider-arrow-top').on('click', function(e){
+		    e.preventDefault()
+		    mySwiper.swipeNext()
+		  })

@@ -9,12 +9,15 @@
 	<title>Pato-services</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="keywords" content="" >
-	<meta name="description" content="" >
+	<meta name="description" content="">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
 	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="js/viewportchecker.js"></script> 
 </head>
 <body>
 	<div class="wrapper-body">
@@ -41,7 +44,7 @@
 			</div>
 	</div><!--Конец Навигации-->
 
-	<div class="under-nav services-menu"><!-- Блок после главной навигации-->
+	<div class="under-nav services-menu post"><!-- Блок после главной навигации-->
 		<div class="container">
 			<nav class="services-nav">
 				<ul>
@@ -69,44 +72,36 @@
 		</div>
 	</div><!-- Конец блока после главной навигации-->
 
-	<div class="about-slider"><!-- Начало слайдера-->
+		<div class="about-slider"><!-- Начало слайдера-->
 		<div class="container">
 			<div class="about-slider-wrapper">
 				<div class="arrow-left">
 					<a href="#" class="arrow-slider slider-arrow-top"></a>
 					<a href="#" class="arrow-slider slider-arrow-bottom"></a>
 				</div>
-				<div class="about-slider-img services-img">
-					<img src="images/services-img.jpg" alt="">
-				</div>
+				 <div class="swiper-container">
+			      <div class="swiper-wrapper">
+			        <div class="swiper-slide"> <img src="images/about-img.jpg"> </div>
+			        <div class="swiper-slide"> <img src="images/services-img.jpg"> </div>
+			        <div class="swiper-slide"> <img src="images/about-img.jpg"></div>
+			      </div>
+			    </div>
 				<div class="arrow-right">
 					<a href="#" class="arrow-slider slider-arrow-left"></a>
 					<a href="#" class="arrow-slider slider-arrow-right"></a>
 				</div>
+				<div class="pagination"></div>
 			</div>
+
 		</div>
 	</div><!-- Конец слайдера-->
-	<div class="footer-push"></div>
-	</div>
-	<footer> <!-- футер-->
-			<div class="container">
-				
-				<div class="about-company">
-					<h3>о компании</h3>
-					<div class="control">
-						<ul>
-							<li class="itemLinks" data-pos="0px"></li>
-							<li class="itemLinks" data-pos="-580px"></li>
-							<li class="itemLinks" data-pos="-1160px"></li>
-						</ul>
-					</div>
 	
-				</div>
-				<div class="contacts">
-					<h3>контакты</h3>
-				</div>
-				<div class="clear"></div>
-				<div class="minus closed"></div>
+	</div>
+	<div class="footer"> <!-- футер-->
+			<div class="container">
+		
+				<div class="spoiler closed">
+				<div class="title"><div class="title_h3"></div></div>
 				<div class="spoiler-body">
 					<div class="about-company-text">
 						<div id="wrapper">
@@ -137,10 +132,27 @@
 					</div>
 					<a href="#" class="arrow"></a>
 				</div>
-
+				</div>
+				
+				<div class="about-company">
+					<h3>о компании</h3>
+					<div class="control">
+						<ul>
+							<li class="itemLinks" data-pos="0px"></li>
+							<li class="itemLinks" data-pos="-580px"></li>
+							<li class="itemLinks" data-pos="-1160px"></li>
+						</ul>
+					</div>
+	
+				</div>
+				<div class="contacts">
+					<h3>контакты</h3>
+				</div>
 				
 			</div>
-	</footer>
+	</div>
+
+	<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>	
