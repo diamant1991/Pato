@@ -59,6 +59,10 @@
 .footer>.container{
 	position: relative;
 }
+.under-nav nav ul{
+	position: relative;
+	right: -50%;
+}
 .nav, .filter-block, footer, .nav-fixed{
 	overflow: hidden;
 	background: #000;
