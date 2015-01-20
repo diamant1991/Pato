@@ -16,6 +16,7 @@
             }) //скрываем текстовый логотип
         }
     }); //scroll
+   
 });
 	
 		$(function () {
@@ -162,6 +163,7 @@ function changePosition(link) {
     var position = link.getAttribute("data-pos");
     wrapper.style.left = position;
 }
+
 
 
 

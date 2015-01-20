@@ -322,6 +322,7 @@
     padding-left: 1px;
 }
 
+
 .contacts{
 	width: 145px;
 	float: left;
@@ -489,6 +490,9 @@
 .under-nav nav{
 	width: 425px;
 	margin: 0 auto;
+	position: relative;
+	float: right;
+	right: 50%;
 }
 .services-nav{
 	width: auto !important;
@@ -515,6 +519,8 @@
 }
 .services-nav ul{
 	overflow: hidden;
+	position: relative;
+	right: -50%;
 }
 	.services-nav ul:last-child{
 		margin-top: 20px;
