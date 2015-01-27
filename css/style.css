@@ -716,6 +716,7 @@ background: url(../images/shape.jpg) no-repeat;
 	background-size: cover;
 	height: 599px;
 	min-width: 980px;
+	margin-bottom: 50px;
 }
 .contact-information .container{
 	padding-top: 75px !important;
@@ -764,7 +765,7 @@ background: url(../images/shape.jpg) no-repeat;
 	width:393px;
 	height: 561px;
 	background: url(../images/duck.png) no-repeat; 
-	top: 0;
+	top: 10px;
 	right: -60px;
 }
 
@@ -879,7 +880,7 @@ footer {
 	margin: 0;
     padding: 0;
     height: auto;
-     position: absolute;
+     position: fixed;
 	 bottom: 0;
 	 width: 100%;
 	 z-index: 10;
@@ -890,6 +891,23 @@ footer {
 	display: none;
 
 }
+.post{
+	-webkit-animation-delay: 0.2s;
+	-moz-animation-delay:0.2s;
+	-o-animation-delay:0.2s;
+	-ms-animation-delay:0.2s;
+}
+.label-social{
+	padding-top: 6px;
+	padding-right: 5px;
+}
+.contacts>.social-container{
+	margin-top: -3px;
+}
+.contact-text-second p{
+	margin-top: 15px;
+}
+
 
 
 @media (min-width: 768px) {
