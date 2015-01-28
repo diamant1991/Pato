@@ -12,9 +12,12 @@
 	<meta name="description" content="" >
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/slider.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
 	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
 	
 </head>
 <body>	
@@ -43,16 +46,26 @@
 		</div><!--Конец Навигации-->
 
 
-		<div class="slider"><!-- Слайдер-->
-			<figure>
-				<img src="images/slider.jpg" alt="">
-			</figure>
-		</div><!--Конец слайдера-->
+		<div class="flex-container">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<img src="images/slider.jpg" />
+					</li>
+					
+					<li>
+						<img src="images/slider.jpg" />
+					</li>
+					
+					
+				</ul>
+			</div>
+		</div>
 
 		<div class="filter-block"> <!-- filter-->
 			<div class="container">
 				<div class="header-social">	
-					<a href="#" class="social vopros"></a>
+					<a class="social vopros"></a>
 					<a href="#" class="social star"></a>
 					<a href="#" class="social facebook"></a>
 					<a href="#" class="social in"></a>
@@ -342,6 +355,46 @@
 				
 			</div>
 	</div>
+
+	<div class="form_mask"></div>
+	<div class="feedback-form">
+		<h2>Обратная связь</h2>
+		<label for="">Имя</label><input type="text"><br>
+		<label for="">E-mail</label><input type="text"><br>
+		<label for="">Телефон</label><input type="text"><br>
+		<label for="">Вэбсайт</label><input type="text"><br>
+		<div class="dropdown-input">
+			<label for="">Цель визита</label><input type="text">
+			<div class="categories" style="z-index:11;">
+						<a href="javascript:void(0);" class="padd-other"></a>
+							<ul id="sub-menu" class="dropdown">
+								<li class="filter">Все категории</li>
+								<li class="filter">О студии</li>
+								<li class="filter">Наши клиенты</li>
+								<li class="filter">Команда</li>
+								<li class="filter">Наши партнеры</li>
+								<li class="filter">Новости</li>
+							</ul>
+				</div>
+		</div>
+		<div class="dropdown-input">
+			<label for="">Услуги</label><input type="text">
+			<div class="categories">
+						<a href="javascript:void(0);" class="padd-left"></a>
+							<ul id="sub-menu" class="dropdown">
+								<li class="filter">Все категории</li>
+								<li class="filter">О студии</li>
+								<li class="filter">Наши клиенты</li>
+								<li class="filter">Команда</li>
+								<li class="filter">Наши партнеры</li>
+								<li class="filter">Новости</li>
+							</ul>
+				</div>
+		</div>
+		<label for="" class="text-feedback">Текст</label><textarea name="" id="" cols="30" rows="10"></textarea>
+		<input type="submit">
+	</div>
+
 
 	<script type="text/javascript" src="js/index.js"></script>
 </body>

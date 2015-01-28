@@ -4,17 +4,50 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 10 && $nav.hasClass("nav")) {
             $nav.removeClass("nav").addClass("nav-fixed");
-            $('.logo-container').fadeOut(0,function(){
-                $('.logo-text').fadeIn() //показываем текстовый логотип, уже после того, как скрыли логотип
+            $('.logo-container').hide(0,function(){
+                $('.logo-text').show() //показываем текстовый логотип, уже после того, как скрыли логотип
             }) //скрываем логотип
             
         } else if ($(this).scrollTop() <= 10 && $nav.hasClass("nav-fixed")) {
             $nav.removeClass("nav-fixed").addClass("nav");
-            $('.logo-text').fadeOut(0,function(){
-                $('.logo-container').fadeIn() //показываем логотип, уже после того, как скрыли текстовый логотип
+            $('.logo-text').hide(0,function(){
+                $('.logo-container').show() //показываем логотип, уже после того, как скрыли текстовый логотип
             }) //скрываем текстовый логотип
         }
     }); //scroll
+
+    var $nav2=$(".filter-block")
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 350 && $nav2.hasClass("filter-block")) {
+            $nav2.removeClass("nav").addClass("filter-block-fixed");
+            
+            
+        } else if ($(this).scrollTop() <= 350 && $nav2.hasClass("filter-block-fixed")) {
+            $nav2.removeClass("filter-block-fixed").addClass("filter-block");
+            
+        }
+    }); //scroll
+
+    $('.vopros, .contacts-vopros').click(function(){
+   		if($('.feedback-form').attr('visible')!='true'){
+	   		$('.form_mask').css({'display':'block'})
+	        $('.feedback-form').css({'display':'block'})
+	        $('.feedback-form').attr({'visible':'true'})
+	  	}
+	  	else{
+   			$('.form_mask').css({'display':'none'})
+        	$('.feedback-form').css({'display':'none'})
+	        $('.feedback-form').attr({'visible':'false'})
+	  	}
+	})
+$(document).mouseup(function (e) {
+    var container = $(".feedback-form");
+    var form=$(".form_mask");
+    if (container.has(e.target).length === 0){
+        container.hide();
+        form.hide();
+    }
+});
    
 });
 	
@@ -172,6 +205,8 @@ function changePosition(link) {
 		    loop:true,
 		    grabCursor: true,
 		    paginationClickable: true,
+		    autoplay:10000,
+		    autoplayDisableOnInteraction:false 
 		  })
 		  $('.slider-arrow-left').on('click', function(e){
 		    e.preventDefault()
@@ -189,3 +224,5 @@ function changePosition(link) {
 		    e.preventDefault()
 		    mySwiper.swipeNext()
 		  })
+
+
