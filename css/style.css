@@ -44,9 +44,10 @@
     display: inline-block;
 }
 .nav-fixed{
-	position: fixed;
+	position: fixed !important;
 	width: 100%;
 	top: 0;
+	overflow: inherit !important; 
 	overflow: hidden;
 	background: #000;
 	min-width: 980px;
@@ -81,9 +82,8 @@
 	background: #000;
 	min-width: 980px;
 }
-.nav nav , .nav-fixed nav{
+.nav nav{
 	overflow: hidden;
-	
 }
 .nav nav ul li, .nav-fixed nav ul li{
 	list-style: none;
@@ -482,7 +482,7 @@
 	background-position: 175px 3px;
 }
 
-.padd-left{
+.padd-left, .padd-other{
 	padding-left: 15px;
 }
 .padd-other{
@@ -506,7 +506,7 @@ box-shadow:         inset 0px 10px 15px -5px rgba(50, 50, 50, 0.75);
 	padding-right: 14px;
 	border-right: 2px solid #c7c7c7;
 }
-.dropdown{
+.dropdown, .dropdown-modal{
 	display: none;
 }
 /*---------------------------------------Страница о студии----------------------------------------*/
@@ -514,12 +514,12 @@ box-shadow:         inset 0px 10px 15px -5px rgba(50, 50, 50, 0.75);
 .under-nav{
 	overflow: hidden;
 	background-color: #464646;
-	padding-top: 65px;
+	padding-top: 101px;
 	padding-bottom: 35px;
 	min-width: 980px;
 }
 .services-menu{
-	padding-top: 45px !important;
+	padding-top: 91px !important;
 	padding-bottom: 25px !important;
 }
 .under-nav nav{

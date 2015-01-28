@@ -1,5 +1,5 @@
 $(document).ready(function () {
-		var $nav = $("#nav");
+		/*var $nav = $("#nav");
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 10 && $nav.hasClass("nav")) {
@@ -14,7 +14,17 @@ $(document).ready(function () {
                 $('.logo-container').show() //показываем логотип, уже после того, как скрыли текстовый логотип
             }) //скрываем текстовый логотип
         }
-    }); //scroll
+    }); //scroll*/
+$(window).scroll(function() {
+if ($(this).scrollTop() > 10){  
+    $('.logo-container').hide(700);
+    $('.logo-text').show(700);
+  }
+  else{
+    $('.logo-container').show(700);
+    $('.logo-text').hide(700);
+  }
+});
 
     var $nav2=$(".filter-block")
     $(window).scroll(function () {
@@ -28,7 +38,7 @@ $(document).ready(function () {
         }
     }); //scroll
 
-    $('.vopros, .contacts-vopros').click(function(){
+    $('.vopros, .contacts-vopros, .contact-vopros').click(function(){
    		if($('.feedback-form').attr('visible')!='true'){
 	   		$('.form_mask').css({'display':'block'})
 	        $('.feedback-form').css({'display':'block'})
