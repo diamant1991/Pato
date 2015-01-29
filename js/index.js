@@ -1,20 +1,5 @@
 $(document).ready(function () {
-		/*var $nav = $("#nav");
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 10 && $nav.hasClass("nav")) {
-            $nav.removeClass("nav").addClass("nav-fixed");
-            $('.logo-container').hide(0,function(){
-                $('.logo-text').show() //показываем текстовый логотип, уже после того, как скрыли логотип
-            }) //скрываем логотип
-            
-        } else if ($(this).scrollTop() <= 10 && $nav.hasClass("nav-fixed")) {
-            $nav.removeClass("nav-fixed").addClass("nav");
-            $('.logo-text').hide(0,function(){
-                $('.logo-container').show() //показываем логотип, уже после того, как скрыли текстовый логотип
-            }) //скрываем текстовый логотип
-        }
-    }); //scroll*/
+		
 $(window).scroll(function() {
 if ($(this).scrollTop() > 10){  
     $('.logo-container').hide(700);
@@ -137,10 +122,7 @@ $('.padd-left').click(function(){
 
 
 
-jQuery('.post').addClass("hidden").viewportChecker({
-	    classToAdd: 'visible animated fadeInDown', // Class to add to the elements when they are visible
-	    offset: 200 
-	   });  
+
 
 
 	});	
@@ -208,31 +190,5 @@ function changePosition(link) {
 
 
 
-
-/*------------------------------------Swiper slider--------------*/
-		  var mySwiper = new Swiper('.swiper-container',{
-		    pagination: '.pagination',
-		    loop:true,
-		    grabCursor: true,
-		    paginationClickable: true,
-		    autoplay:10000,
-		    autoplayDisableOnInteraction:false 
-		  })
-		  $('.slider-arrow-left').on('click', function(e){
-		    e.preventDefault()
-		    mySwiper.swipePrev()
-		  })
-		   $('.slider-arrow-bottom').on('click', function(e){
-		    e.preventDefault()
-		    mySwiper.swipePrev()
-		  })
-		  $('.slider-arrow-right').on('click', function(e){
-		    e.preventDefault()
-		    mySwiper.swipeNext()
-		  })
-		   $('.slider-arrow-top').on('click', function(e){
-		    e.preventDefault()
-		    mySwiper.swipeNext()
-		  })
 
 
