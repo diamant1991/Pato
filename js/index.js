@@ -120,7 +120,12 @@ $('.padd-left').click(function(){
 	return false;
 });
 
-
+$(document).mouseup(function (e) {
+    var drop = $(".dropdown");
+    if (drop.has(e.target).length === 0){
+        drop.slideUp();
+    }
+});
 
 
 
