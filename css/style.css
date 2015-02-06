@@ -135,7 +135,7 @@
 .left-nav{
 	display: inline-block;
 	float: left;
-	padding:18px 0 16px 55px;
+	padding:17px 0 15px 55px;
 	position: relative;
 	z-index: 3;
 }
@@ -148,7 +148,7 @@
 	float: right;
 	position: relative;
 	right: 46px;
-	padding:18px 0 16px 55px;
+	padding:17px 0 15px 55px;
 	position: relative;
 	z-index: 3;
 }
