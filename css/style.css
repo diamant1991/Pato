@@ -1134,21 +1134,21 @@ footer {
 		width: 1700px;
 	}
 }
+@media (min-height: 800px){
+	.about-slider{
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	}
+@media (min-height: 1000px){
+	.about-slider{
+		padding-top: 130px;
+		padding-bottom: 130px;
+	}
+	}
 @media (min-height: 1100px){
-	#cont-height{
-		width: 1200px;
-		margin: 0 auto;
+	.about-slider{
+		padding-top: 190px;
+		padding-bottom: 190px;
 	}
-	.portfolio-view{
-		width: 363px !important;
-		height: 265px !important;
-		margin: 20px 20px 10px 5px;
-	}
-	.portfolio-view .mask{
-		width: 363px !important;
-		height: 265px !important;
-	}
-	.portfolio-view img{
-		width: 363px !important;
-		height: 265px !important;
 	}
