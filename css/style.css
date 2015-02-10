@@ -1033,13 +1033,17 @@ footer {
 		text-indent: 0.01px;
 		text-overflow: '';
 		background: transparent;
-		width: 350px;
+		width: 368px;
 	   height: 38px;
 	   border: 0;
 	   outline: 0;
 	   font-size: 16px;
 		font-family:'Century Gothic';
 		padding-left: 10px;
+	}
+	.div-select{
+		width: 350px;
+		overflow: hidden;
 	}
 		
 	.styled-select {
@@ -1111,6 +1115,75 @@ footer {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60a338', endColorstr='#40761d',GradientType=0 ); /* IE6-9 */
 }
 
+/*	=	Select */
+.slct {
+	display: block;
+	border: 1px solid #cecece;
+	background-color: #Fff;
+	width: 350px;
+	padding: 10px 15px 4px 10px;
+	color: #000 !important;
+	background-image: url(../images/arrow-bottom-big.png);
+	background-repeat:no-repeat;
+	background-position: 97%; 
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;	
+	height: 38px;
+	-webkit-border-radius: 2px;
+	-moz-webkit-border-radius: 2px;
+	-ms-webkit-border-radius: 2px;
+	-o-webkit-border-radius: 2px;
+	border-radius: 2px;
+	text-decoration: none;
+
+}
+.slct.active {
+	border-radius: 2px 2px 0 0;
+	border: 1px solid #cecece;
+	color: #000 !important
+}
+.drop {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+	line-height: 1.2;
+	width: 350px;
+	border-top: none;
+	border-bottom: 1px solid #cecece;
+	display: none;
+	position: absolute;
+	background: #fff;
+}
+.drop li {
+	list-style: none;
+	cursor: pointer;
+	display: block;
+	color: #000 !important;
+	padding: 4px 15px 4px 25px;
+	background-position: 10px -119px;
+}
+	.drop li a{
+		color: #000 !important;
+		text-decoration: none;
+	}
+.drop li:hover {
+	background-color: #e8e8e8;
+	color: #000;
+}
+.select{
+	float: right;
+	margin-top: 10px;
+	margin-right: 3px;
+	font-size: 15px;
+	font-family: 'Century Gothic';
+	color: #000 !important
+}
+	.select a{
+		color: #000 !important;
+		text-decoration: none;
+	}
 
 
 @media (min-width: 768px) {
