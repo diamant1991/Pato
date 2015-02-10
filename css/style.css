@@ -1136,14 +1136,26 @@ footer {
 }
 @media (min-height: 800px){
 	.about-slider{
-		padding-top: 80px;
-		padding-bottom: 80px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	}
+	@media (min-height: 850px){
+	.about-slider{
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	}
+	@media (min-height: 900px){
+	.about-slider{
+		padding-top: 90px;
+		padding-bottom: 90px;
 	}
 	}
 @media (min-height: 1000px){
 	.about-slider{
-		padding-top: 130px;
-		padding-bottom: 130px;
+		padding-top: 125px;
+		padding-bottom: 125px;
 	}
 	}
 @media (min-height: 1100px){
