@@ -2,12 +2,12 @@ $(document).ready(function () {
 		
 $(window).scroll(function() {
 if ($(this).scrollTop() > 10){  
-    $('.logo-container').hide(700);
-    $('.logo-text').show(700);
+    $('.logo-container').slideUp(400);
+    $('.logo-text').slideDown(400);
   }
   else{
-    $('.logo-container').show(700);
-    $('.logo-text').hide(700);
+    $('.logo-container').slideDown(400);
+    $('.logo-text').slideUp(400);
   }
 });
 
@@ -133,6 +133,7 @@ $(document).mouseup(function (e) {
 	});	
 
 $(".closed").toggleClass("show").children(".title");
+$(".open").toggleClass("hide").children(".title");
 
 $(".title").click(function(){
 if ($(this).parent().hasClass("show")) {
@@ -147,7 +148,19 @@ else {
     $(this).children(".title_h3").css("background","url(images/plus.png)");
     }
 });
+$(".title-open").click(function(){
+if ($(this).parent().hasClass("hide")) {
+    $("div.spoiler").addClass("hide").children(".spoiler-body").show("medium");
+    $("div.spoiler").children(".title-open").children(".title_h3-open").css("background","url(images/minus.png)");
+    $(this).parent().toggleClass("hide").children(".spoiler-body").slideToggle("medium");
+    $(this).children(".title_h3-open").css("background","url(images/plus.png)");
+    }
 
+else {
+    $(this).parent().toggleClass("hide").children(".spoiler-body").slideToggle("medium");
+    $(this).children(".title_h3-open").css("background","url(images/minus.png)");
+    }
+});
 
 /*------------------------Слайдер контента------------*/
 // просто запрашиваем DOM... будто просим разрешение у босса!
