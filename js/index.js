@@ -2,12 +2,12 @@ $(document).ready(function () {
 		
 $(window).scroll(function() {
 if ($(this).scrollTop() > 10){  
-    $('.logo-container').slideUp(400);
-    $('.logo-text').slideDown(400);
+    $('.logo-container').hide();
+    $('.logo-text').show();
   }
   else{
-    $('.logo-container').slideDown(400);
-    $('.logo-text').slideUp(400);
+    $('.logo-container').show();
+    $('.logo-text').hide();
   }
 });
 

@@ -16,8 +16,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
 	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
 	
 </head>
 <body>	
@@ -48,21 +47,13 @@
 		</div><!--Конец Навигации-->
 
 
-		<div class="flex-container">
-			<div class="flexslider">
-				<ul class="slides">
-					<li>
-						<img src="images/slider.jpg" />
-					</li>
-					
-					<li>
-						<img src="images/slider.jpg" />
-					</li>
-					
-					
-				</ul>
-			</div>
-		</div>
+		<div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="images/slider.jpg" data-thumb="images/slider.jpg" alt="" />
+                <img src="images/slider.jpg" data-thumb="images/slider.jpg" alt="">
+            </div>
+            
+        </div>
 
 		<div class="filter-block"> <!-- filter-->
 			<div class="container">
@@ -399,7 +390,7 @@
 		<input type="submit">
 	</div>
 
-
+	<script type="text/javascript" src="js/slider.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/modal.js"></script>
 </body>

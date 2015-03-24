@@ -935,9 +935,7 @@ background: url(../images/shape.jpg) no-repeat;
 	cursor: pointer;
 }
 /*---------------Контент слайдер-------*/
-#slider {float:left; position:relative; overflow:auto; width:580px; height:105px}
-#slider ul {position:absolute; list-style:none; top:0; left:0}
-#slider li {float:left; width:580px; height:105px}
+
 .about-company-text{
 	height: 120px;
 	padding-bottom: 15px;
@@ -1248,33 +1246,53 @@ footer {
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
+	.height-block{
+	height: 100px;
+}
 	}
 	@media (min-height: 850px){
 	.about-slider{
 		padding-top: 70px;
 		padding-bottom: 70px;
 	}
+	.wrapper-body{
+		height: 100%;
+	}
+	.portfolio-block{
+		padding-bottom: 45px;
+	}
+	.news-post{
+		padding-bottom: 50px;
+	}
+	
 	}
 	@media (min-height: 900px){
 	.about-slider{
 		padding-top: 90px;
 		padding-bottom: 90px;
 	}
+	.height-block{
+	height: 30%;
+}
 	}
 @media (min-height: 1000px){
 	.about-slider{
 		padding-top: 125px;
 		padding-bottom: 125px;
 	}
+	.height-block{
+	height: 40%;
+}
 	}
 @media (min-height: 1100px){
 	.about-slider{
 		padding-top: 190px;
 		padding-bottom: 190px;
 	}
-	.wrapper-body{
-		height: 100%;
-	}
+	.height-block{
+	height: 70%;
+}
+	
 	}
 @media (min-height: 1200px){
 	.about-slider{
